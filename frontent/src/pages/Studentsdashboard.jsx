@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BookOpen, TrendingUp, Award, Activity, MessageCircle, ChevronLeft, CheckCircle } from 'lucide-react';
 import QuizView from '../components/Body/QuizView';
-import MemoryDecayHeatmap from '../components/Body/studentLogin/MemoryDecayHeatmap'; // 👉 1. IMPORT ADDED HERE
+import MemoryDecayHeatmap from '../components/Body/studentLogin/MemoryDecayHeatmap';
 
 const StudentDashboard = () => {
   // --- STATE MANAGEMENT ---
