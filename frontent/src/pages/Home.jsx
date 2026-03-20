@@ -1,9 +1,9 @@
 import React from 'react';
-import HeroSection from '../components/Body/HeroSection';
-import Features from '../components/Body/Features';
-import Cards from '../components/Body/Cards';
-import FeaturesSection from '../components/Body/FeaturesSection';
-import AdaptiveComparison from '../components/AdaptiveComparison';
+import HeroSection from '../features/landing/HeroSection';
+import Features from '../features/landing/Features';
+import Cards from '../features/landing/Cards';
+import FeaturesSection from '../features/landing/FeaturesSection';
+import AdaptiveComparison from '../features/landing/AdaptiveComparison';
 
 const Home = () => {
   return (

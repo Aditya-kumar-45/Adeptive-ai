@@ -4,10 +4,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import Home from './pages/Home.jsx'
-import Contact from './components/Header/Contact.jsx'
-import StudentDashboard from './pages/Studentsdashboard.jsx'
-import Features from './components/Body/Features.jsx'
+import Contact from "./components/layout/Header/Contact.jsx";
+import About from "./components/layout/Header/About.jsx";
+import Features from './features/landing/Features.jsx'
 import { ThemeProvider } from './context/Theme.jsx'
+import StudentDashboard from "./features/student/pages/StudentDashboard.jsx";
+
+
 
 const router = createBrowserRouter([
   {
@@ -23,11 +26,15 @@ const router = createBrowserRouter([
         element: <Features />
       },
       {
+        path: "about",
+        element: <About />
+      },
+      {
         path: "contact",
         element: <Contact /> // This routes to Contact Us
       },
       {
-        path: "dashboard",
+        path: "StudentDashboard",
         element: <StudentDashboard />
       }
     ]
