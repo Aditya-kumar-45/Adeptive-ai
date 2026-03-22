@@ -106,7 +106,13 @@ const LoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
       onClose();
 
       // ✅ ADD THIS LINE - Navigate to dashboard
-      navigate('/StudentDashboard');
+      // navigate('/StudentDashboard');
+      // // ✅ Navigate based on user role
+      if (data.user.role === 'teacher') {
+        navigate('/TeacherDashboard');
+      } else {
+        navigate('/StudentDashboard');
+      }
 
     } catch (err) {
       console.error("Login error:", err);

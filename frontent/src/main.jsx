@@ -1,3 +1,4 @@
+// src/main.jsx
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -5,20 +6,21 @@ import './index.css'
 import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import Contact from "./components/layout/Header/Contact.jsx";
-import About from "./components/layout/Header/About.jsx";
+import About from "./components/layout/Header/AboutSection.jsx";
 import Features from './features/landing/Features.jsx'
 import { ThemeProvider } from './context/Theme.jsx'
-import StudentDashboard from "./features/student/pages/StudentDashboard.jsx";
 
-
+// ✅ Import from the correct path where your files are
+import StudentDashboard from "./pages/StudentDashboard.jsx";
+import TeacherDashboard from "./pages/TeacherDashboard.jsx";  // This is the one we just created
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />, // Use the Layout here
+    element: <App />,
     children: [
       {
-        path: "", // This is the default (Home)
+        index: true,
         element: <Home />
       },
       {
@@ -31,11 +33,15 @@ const router = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <Contact /> // This routes to Contact Us
+        element: <Contact />
       },
       {
-        path: "StudentDashboard",
+        path: "student-dashboard",
         element: <StudentDashboard />
+      },
+      {
+        path: "teacher-dashboard",
+        element: <TeacherDashboard />
       }
     ]
   }
